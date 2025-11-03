@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>타이머 & 공부/요리 관리</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>타이머 & 공부/요리 관리</h1>
+
+<div>
+    <h2>타이머</h2>
+    <select id="taskSelect">
+        <option value="">선택</option>
+    </select><br>
+    <input type="number" id="minutes" placeholder="분" min="0">
+    <button onclick="startTimer()">시작</button>
+    <div id="timerDisplay">00:00</div>
+</div>
+
+<hr>
+
+<div>
+    <h2>공부 과목</h2>
+    <input type="text" id="subjectInput" placeholder="과목 입력">
+    <button onclick="addSubject()">추가</button>
+    <ul id="subjectList"></ul>
+</div>
+
+<hr>
+
+<div>
+    <h2>요리/할 일</h2>
+    <input type="text" id="taskInput" placeholder="요리/할 일 입력">
+    <button onclick="addTask()">추가</button>
+    <ul id="taskList"></ul>
+</div>
+
+<hr>
+
+<div id="charts">
+    <h2>총 시간 통계 (막대그래프)</h2>
+    <canvas id="timeChart"></canvas>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
